@@ -29,7 +29,7 @@
 .Hamburger.IsActive .Hamburgerinner,
 .Hamburger.IsActive .Hamburgerinner::before,
 .Hamburger.IsActive .Hamburgerinner::after {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .Hamburgerbox {
@@ -49,7 +49,7 @@
 .Hamburgerinner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -68,13 +68,6 @@
   bottom: -10px;
 }
 
-/*
-   * 3DX
-   */
-
-/*
-   * Spin
-   */
 .Hamburgerspin .Hamburgerinner {
   transition-duration: 0.22s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -100,38 +93,6 @@
 .Hamburgerspin.IsActive .Hamburgerinner::after {
   bottom: 0;
   transform: rotate(-90deg);
-  transition: bottom 0.1s ease-out,
-    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-/*
-   * Spin Reverse
-   */
-.Hamburger--spin-r .Hamburgerinner {
-  transition-duration: 0.22s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-.Hamburger--spin-r .Hamburgerinner::before {
-  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-}
-.Hamburger--spin-r .Hamburgerinner::after {
-  transition: bottom 0.1s 0.25s ease-in,
-    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.Hamburger--spin-r.IsActive .Hamburgerinner {
-  transform: rotate(-225deg);
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.Hamburger--spin-r.IsActive .Hamburgerinner::before {
-  top: 0;
-  opacity: 0;
-  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-}
-.Hamburger--spin-r.IsActive .Hamburgerinner::after {
-  bottom: 0;
-  transform: rotate(90deg);
   transition: bottom 0.1s ease-out,
     transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
